@@ -159,3 +159,9 @@ sudo chown ubuntu.ubuntu /templates
 sudo su - ${INSTRUCTOR_USERNAME} -c "ln -s /templates templates"
 sudo chown ubuntu.ubuntu /home/${INSTRUCTOR_USERNAME}/templates
 
+# setup gnuplot
+sudo apt-get install -y gnuplot
+
+# setup cairo
+sudo apt-get install -y libcairo2-dev
+${CLASSNAME}/bin/pip3 install pycairo
