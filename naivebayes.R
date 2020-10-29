@@ -32,7 +32,7 @@ single_feature_confusion_matrix <- function(llrsum, llrdiff, loy) {
     c(p0n=p0n, p1n=p1n, p0y=p0y, p1y=p1y)
 }
 
-y <- sample(c(0.0, 1.0), size=N, prob=binary_probs_from_log_odds(LO_real)[1,], replace=TRUE)
+y <- sample(c(0.0, 1.0), size=N, prob=binary_probs_from_log_odds(LO_real), replace=TRUE)
 
 posneg <- sample(c(1.0, -1.0), size=P, replace=TRUE)
 norm_mean_shift <- 2.0
